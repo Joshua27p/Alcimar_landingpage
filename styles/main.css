@@ -47,6 +47,9 @@ body {
 .logo {
   margin: 20px 0 0 100px;
 }
+#menu {
+  display: none;
+}
 ul {
   list-style-type: none;
   overflow: hidden;
@@ -304,6 +307,10 @@ li a:hover {
   }
 }
 @media screen and (max-width: 996px) {
+  #menu {
+    display: block;
+    cursor: pointer;
+  }
   .title.servicios {
     font-size: 2rem;
   }
