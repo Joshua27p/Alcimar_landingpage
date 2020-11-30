@@ -157,7 +157,9 @@ li a:hover {
 /* .main {
   display: none;
 } */
+
 /* FORMULARIO */
+
 .contenedor-formulario {
   width: 100%;
   max-width: 850px;
@@ -169,6 +171,9 @@ li a:hover {
   padding: 40px 40px;
   justify-content: center;
   background-color: var(--cardGray);
+}
+#formulario input {
+  padding: 10px;
 }
 ::-webkit-input-placeholder {
   color: var(--color-gray);
