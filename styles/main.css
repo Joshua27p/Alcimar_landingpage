@@ -1,0 +1,250 @@
+body {
+  margin: 0;
+  background: var(--baseBackground);
+}
+:root {
+  --color-verde: rgb(39, 150, 17);
+  --color-smokewhite: rgba(240, 238, 238, 0.966);
+  --color-gold: #d1b309;
+  --color-white: #fff;
+  --color-hoverpurple: #bd1b94;
+  --color-gray: rgb(150, 144, 144);
+  --color-black: rgb(49, 47, 47);
+  --cardGray: #f0f3fa;
+  --cardTitle: #6f717e;
+  --baseBackground: white;
+}
+/* wrapper toda la pagina */
+
+.wrapper {
+  padding: 0 30px;
+}
+.grid {
+  display: grid;
+  grid-row-gap: 25px;
+}
+/* header */
+
+.header {
+  display: flex;
+  background-color: var(--color-verde);
+  justify-content: space-around;
+  align-items: center;
+  width: auto;
+  height: 80px;
+  opacity: 0.8;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.logo {
+  margin: 20px 0 0 100px;
+}
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  margin-right: 30px;
+  padding: 0;
+}
+li {
+  float: right;
+}
+li a {
+  display: block;
+  padding: 8px;
+  color: var(--color-white);
+  padding: 14px 16px;
+  text-decoration: none;
+  border: 1pxs solid var(--color-verde);
+  border-radius: 25px;
+  font-family: "Comfortaa", cursive;
+  font-size: 16px;
+}
+li a:hover {
+  background-color: var(--color-hoverpurple);
+}
+.link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin: 0px 20px;
+}
+/* BANNER  */
+
+.banner {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border-top: 3px solid var(--color-gold);
+}
+.banner figure {
+  margin: 0;
+}
+.banner figure img {
+  width: 100%;
+}
+/* titulo de servicio */
+.title {
+  font-family: "Comfortaa", cursive;
+  color: var(--color-verde);
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.premium {
+  color: var(--color-gold);
+  font-family: "Yesteryear", cursive;
+  font-size: 45px;
+  margin: 0;
+  padding: 0;
+}
+
+/* BODY DE SERVICIOS */
+.body {
+  display: flex;
+  display: grid;
+  justify-content: center;
+}
+.cart {
+  display: flex;
+  width: 1000px;
+}
+/* Editar cart */
+.parrafo {
+  width: 549px;
+  height: 293px;
+  border-radius: 45px;
+  background-color: var(--color-verde);
+  padding: 25px;
+}
+/* titulo del cart  */
+.title-cart-1 {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  color: var(--color-gold);
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.parrafo {
+  font-family: "Comfortaa", cursive;
+  color: var(--color-white);
+  justify-content: space-around;
+  font-size: 20px;
+}
+/* Editar tamaño imagen */
+.imagencart {
+  width: 472px;
+  height: 237px;
+  overflow: hidden;
+  position: relative;
+  top: 20%;
+}
+.image-container {
+  margin: 0;
+}
+
+/* .main {
+  display: none;
+} */
+/* FORMULARIO */
+.contenedor-formulario {
+  width: 100%;
+  max-width: 850px;
+  margin: auto;
+  position: relative;
+}
+.formulario {
+  width: 100%;
+  padding: 40px 40px;
+  justify-content: center;
+  background-color: var(--cardGray);
+}
+::-webkit-input-placeholder {
+  color: var(--color-gray);
+}
+.forma-uno {
+  border: 2px var(--color-gray) solid;
+  border-radius: 25px;
+  display: grid;
+  width: 100%;
+  height: 50px;
+  font-family: "Comfortaa", cursive;
+}
+.divisor {
+  display: flex;
+}
+.forma {
+  border: 2px var(--color-gray) solid;
+  border-radius: 25px;
+  width: 50%;
+  height: 50px;
+  font-family: "Comfortaa", cursive;
+}
+/* SECCION NOSOTROS */
+
+.nosotros {
+  margin-top: 20px;
+  margin-bottom: 3em;
+}
+.title {
+  font-family: "Yesteryear", cursive;
+  font-size: 60px;
+  margin: 30px 0 0 20px;
+}
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--cardGray);
+  text-align: center;
+  padding: 1.7em 0;
+  position: relative;
+  margin-right: 10px;
+}
+.card:before {
+  content: "";
+  height: 4px;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.card.experiencia::before {
+  background: var(--color-verde);
+}
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cardTitle);
+  font-size: 0.9em;
+  font-weight: bold;
+  font-family: "Comfortaa", cursive;
+}
+.card-experiencia-years {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: "Nerko One", cursive;
+}
+.card-experiencia-content {
+  display: block;
+  text-transform: uppercase;
+  color: var(--cardTitle);
+  font-size: 0.75m;
+  font-family: "Comfortaa", cursive;
+}
+
+@media screen and (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-wdth: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
