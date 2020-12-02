@@ -39,6 +39,7 @@ body {
   height: 4rem;
   opacity: 0.8;
   z-index: 10000;
+  box-sizing: border-box;
 }
 .sticky {
   position: fixed;
@@ -123,6 +124,7 @@ li a:hover {
 .cart {
   display: flex;
   width: 100%;
+  box-sizing: border-box;
 }
 /* Editar cart */
 .parrafo {
@@ -170,6 +172,7 @@ li a:hover {
   max-width: 850px;
   margin: auto;
   position: relative;
+  box-sizing: border-box;
 }
 .formulario {
   width: 100%;
@@ -353,5 +356,10 @@ li a:hover {
   }
   .contenedor-formulario {
     margin: auto;
+  }
+}
+@media screen and (max-width: 380px) {
+  .cart {
+    width: 45vh;
   }
 }
