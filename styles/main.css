@@ -7,11 +7,11 @@ body {
   background: var(--baseBackground);
 }
 :root {
-  --color-verde: rgb(28, 141, 5);
+  --color-verde: rgb(44, 114, 31);
   --color-smokewhite: rgba(240, 238, 238, 0.966);
   --color-gold: #d1b309;
   --color-white: #fff;
-  --color-hoverpurple: #bd1b94;
+  --color--hover: #6b8f08;
   --color-gray: rgb(150, 144, 144);
   --color-black: rgb(49, 47, 47);
   --cardGray: #f0f3fa;
@@ -37,7 +37,6 @@ body {
   align-items: center;
   width: auto;
   height: 4rem;
-  opacity: 0.8;
   z-index: 10000;
   box-sizing: border-box;
 }
@@ -45,6 +44,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  opacity: 0.8;
 }
 .logo {
   margin: 20px 0 0 100px;
@@ -75,7 +75,7 @@ li a {
   transition: 0.6s;
 }
 li a:hover {
-  background-color: var(--color-hoverpurple);
+  background-color: var(--color--hover);
 }
 .link {
   text-decoration: none;
@@ -149,6 +149,12 @@ li a:hover {
   justify-content: space-around;
   font-size: 1.2rem;
 }
+.parrafo.uno {
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
+}
+.parrafo.dos {
+  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.4);
+}
 /* Editar tamaño imagen */
 .imagencart {
   width: 25rem;
@@ -180,6 +186,7 @@ li a:hover {
   background-color: var(--cardGray);
 }
 #formulario input {
+  margin: 5px;
   padding: 10px;
   box-sizing: border-box;
 }
