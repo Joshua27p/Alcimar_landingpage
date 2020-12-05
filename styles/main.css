@@ -16,54 +16,58 @@ body {
   --color-black: rgb(49, 47, 47);
   --cardGray: #f0f3fa;
   --cardTitle: #6f717e;
-  --baseBackground: white;
+  --baseBackground: rgb(247, 241, 241);
 }
-/* wrapper toda la pagina */
-
 .wrapper {
-  padding: 0;
-  width: 100%;
+  max-width: 1000px;
+  flex: 1;
+  margin: 0px auto;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  height: inherit;
+  flex-wrap: inherit;
 }
-.grid {
-  display: grid;
-  grid-row-gap: 25px;
+
+.wrapper-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 /* header */
 
 .header {
-  display: flex;
   background-color: var(--color-verde);
-  justify-content: space-around;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  width: auto;
-  height: 4rem;
-  z-index: 10000;
-  box-sizing: border-box;
+  height: 5rem;
+  align-items: center;
 }
-.sticky {
-  position: relative;
-  top: 0;
-  width: 100%;
-  opacity: 0.8;
+.header figure {
+  margin: 0px 0px 0px 20px;
+  width: 120px;
+  height: 50px;
 }
-.logo {
-  margin: 20px 0 0 100px;
-}
-#menu {
-  display: none;
-}
+
 ul {
-  list-style-type: none;
-  overflow: hidden;
-  margin-right: 30px;
-  padding: 0;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  height: inherit;
 }
 li {
-  float: right;
+  height: inherit;
 }
-li a {
-  display: block;
-  padding: 8px;
+
+li a:hover {
+  background-color: var(--color--hover);
+}
+.link {
+  text-decoration: none;
+  margin: 0px 20px;
   color: var(--color-white);
   padding: 14px 16px;
   text-decoration: none;
@@ -71,18 +75,12 @@ li a {
   border-radius: 25px;
   font-family: "Comfortaa", cursive;
   font-size: 16px;
-  position: relative;
   transition: 0.6s;
 }
-li a:hover {
-  background-color: var(--color--hover);
-}
-.link {
-  text-decoration: none;
+.menu {
   display: flex;
-  align-items: center;
-  margin: 0px 20px;
 }
+/* ****************************************** */
 /* BANNER  */
 
 .banner {
@@ -98,6 +96,7 @@ li a:hover {
 .banner figure img {
   width: 100%;
 }
+/* ****************************************** */
 /* titulo de servicio */
 .title {
   font-family: "Comfortaa", cursive;
@@ -115,28 +114,45 @@ li a:hover {
   padding: 0;
 }
 
-/* BODY DE SERVICIOS */
-.body {
+/* MAIN DE SERVICIOS */
+.main {
   display: flex;
   display: grid;
   justify-content: center;
+  flex-wrap: wrap;
+  padding: 2%;
 }
 .cart {
   display: flex;
   width: 100%;
-  box-sizing: border-box;
 }
+.imagencart {
+  width: 100%;
+  height: 15rem;
+  position: relative;
+  top: 18%;
+}
+.image-container {
+  margin: 0;
+  width: 49%;
+}
+
 /* Editar cart */
 .parrafo.contenedor {
   margin: 1em 0;
-}
-.parrafo {
-  width: 30rem;
+  width: 49%;
   height: 17rem;
   border-radius: 45px;
   background-color: var(--color-verde);
   padding: 2rem;
 }
+.parrafo {
+  font-family: "Comfortaa", cursive;
+  color: var(--color-white);
+  justify-content: space-around;
+  font-size: 1.1rem;
+}
+
 /* titulo del cart  */
 .title-cart-1 {
   font-size: 2em;
@@ -146,77 +162,157 @@ li a:hover {
   font-weight: bold;
   margin-bottom: 2rem;
 }
-.parrafo {
-  font-family: "Comfortaa", cursive;
-  color: var(--color-white);
-  justify-content: space-around;
-  font-size: 1.2rem;
-}
+
 .parrafo.uno {
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
 }
 .parrafo.dos {
   box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.4);
 }
-/* Editar tamaño imagen */
-.imagencart {
-  width: 25rem;
-  height: 15rem;
-  overflow: hidden;
-  position: relative;
-  top: 18%;
-}
-.image-container {
-  margin: 0;
-}
 
 /* .main {
   display: none;
 } */
+/* ****************************************** */
+/* RUTAS */
 
-/* FORMULARIO */
-
-.contenedor-formulario {
+.cardplace {
+  position: relative;
   width: 100%;
-  max-width: 850px;
-  margin: auto;
+  height: calc(75vh - 118px);
+  background-color: #f5f5f5;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.2s ease-in-out;
+  background-image: url("../images/sliderlima.png");
+  animation: cardplace 50s infinite linear;
+}
+.cardplace-content {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--color-white);
+  background-color: rgba(0, 22, 40, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cardplace-content p {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 30px;
+  font-size: 30px;
+  text-align: center;
+}
+.cardplace-content a {
+  text-decoration: none;
+  color: var(--color-white);
+  padding: 9px 20px;
+  border: 1px solid var(--color-white);
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.3s ease-in-out;
+}
+.cardplace-content a:hover {
+  background-color: #fff;
+  color: #333;
+}
+@keyframes cardplace {
+  0% {
+    background-image: url("../images/sliderlima.png");
+  }
+  16% {
+    background-image: url("../images/sliderlima.png");
+  }
+  17% {
+    background-image: url("../images/sliderhuanuco.png");
+  }
+  33% {
+    background-image: url("../images/sliderhuanuco.png");
+  }
+  34% {
+    background-image: url("../images/slideraguaytia.png");
+  }
+  50% {
+    background-image: url("../images/slideraguaytia.png");
+  }
+  66% {
+    background-image: url("../images/sliderpucallpa.png");
+  }
+  67% {
+    background-image: url("../images/sliderpucallpa.png");
+  }
+  68% {
+    background-image: url("../images/slideriquitos.jpg");
+  }
+  81% {
+    background-image: url("../images/slideriquitos.jpg");
+  }
+  82% {
+    background-image: url("../images/slideryurimaguas.png");
+  }
+  100% {
+    background-image: url("../images/slideryurimaguas.png");
+  }
+}
+
+/* ****************************************** */
+/* FORMULARIO */
+.contenedor-formulario {
+  max-width: 700px;
+  width: 100%;
+  margin: 20px auto;
   box-sizing: border-box;
-  margin-bottom: 2rem;
 }
 .formulario {
-  width: 100%;
-  padding: 1rem 1rem;
-  justify-content: center;
-  background-color: var(--cardGray);
-}
-#formulario input {
-  margin: 5px 0;
-  padding: 10px;
-  box-sizing: border-box;
-}
-::-webkit-input-placeholder {
-  color: var(--color-gray);
-}
-.forma-uno {
-  border: 2px var(--color-gray) solid;
-  border-radius: 25px;
   display: grid;
-  width: 100%;
+  background-color: var(--color-white);
+  padding: 20px;
+}
+.input_field {
+  width: inherit;
   height: 50px;
-  font-family: "Comfortaa", cursive;
-}
-.divisor {
-  display: flex;
-}
-.forma {
   border: 2px var(--color-gray) solid;
   border-radius: 25px;
-  width: 50%;
-  height: 50px;
+  margin: 10px;
   font-family: "Comfortaa", cursive;
+  margin: 5px 0;
+  padding: 5px;
+  box-shadow: 0px 7px 18px -4px rgba(0, 0, 0, 0.05);
 }
-/* SECCION NOSOTROS */
+.input_field.mensaje {
+  height: 100px;
+  outline: none;
+}
+#btn {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  color: var(--color-white);
+  text-align: center;
+  border-radius: 25px;
+  height: 50px;
+  background-color: var(--color-verde);
+  width: 200px;
+  font-family: "Comfortaa", cursive;
+  font-weight: bold;
+  border: 0;
+  margin: 10px;
+}
+.btn:hover {
+  background-color: var(--color--hover);
+  cursor: pointer;
+  border: 3px rgb(165, 64, 115) solid;
+}
 
+/* SECCION NOSOTROS */
+.wrapper-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .nosotros {
   margin-top: 20px;
   margin-bottom: 3em;
@@ -234,6 +330,7 @@ li a:hover {
   padding: 1.7em 0;
   position: relative;
   margin: 0 10px 0 10px;
+  width: 300px;
 }
 .card:before {
   content: "";
@@ -316,99 +413,66 @@ li a:hover {
   font-size: 1em;
 }
 
-@media screen and (min-width: 851px) {
-  .grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+@media screen and (max-width: 1024px) {
 }
-@media screen and (max-width: 850px) {
-  .title.servicios {
-    font-size: 2rem;
+@media screen and (max-width: 932px) {
+  .header {
+    height: auto;
+    display: block;
   }
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .imagencart {
-    display: none;
-  }
-  .parrafo {
-    width: 20rem;
-    height: 150px;
-    border-radius: 45px;
-    background-color: var(--color-verde);
-    padding: 2rem;
-    font-size: 0.8rem;
-  }
-  .cart.one {
-    justify-content: center;
-    margin-bottom: 15px;
-  }
-  .cart.two {
-    justify-content: center;
-  }
-
-  ul {
-    display: none;
-  }
-  .title.contact {
-    font-size: 2rem;
-  }
-  .title-conctacto-first {
-    display: none;
-  }
-  .contact-alcimar.dos {
-    display: grid;
-  }
-  .links a {
-    font-size: 0.5em;
-  }
-  .formulario {
-    width: 90%;
-  }
-  .contenedor-formulario {
-    margin: auto;
-  }
-}
-@media screen and (max-width: 850px) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media screen and (max-width: 600px) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media screen and (max-width: 450px) {
-  .grid {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-  .contenedor-formulario {
-    padding: 1rem;
-  }
-  .forma.dos {
-    width: 100%;
-  }
-  .divisor {
-    display: grid;
-  }
-  .cart {
-    width: 100%;
-  }
-  .parrafo {
-    width: 17rem;
-    height: 8rem;
-    padding: 2rem;
-    font-size: 0.7rem;
-  }
-  .title-cart-1 {
-    font-size: 1.5em;
+  .menu {
     display: flex;
     justify-content: center;
-    color: var(--color-gold);
-    font-weight: bold;
-    margin-bottom: 1rem;
+  }
+  ul {
+    display: block;
+    justify-content: center;
+  }
+  li {
+    margin: 2px 2px;
+    padding: 10px;
+  }
+
+  .link {
+    justify-content: center;
+  }
+  .header figure {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 0px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .cart {
+      display: block;
+    }
+    .imagencart {
+      display: none;
+    }
+    .parrafo.contenedor {
+      width: auto;
+    }
+    .parrafo {
+      font-size: 15px;
+    }
+    .title {
+      font-size: 2em;
+    }
+    .title-cart-1 {
+      font-size: 1.5em;
+    }
+    .contact-alcimar {
+      display: none;
+    }
+    .contact-alcimar.dos {
+      display: block;
+      text-align: center;
+      color: var(--color-white);
+    }
+    .links {
+      font-size: 0.7em;
+    }
   }
 }

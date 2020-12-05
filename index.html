@@ -17,62 +17,82 @@
     <title>Alcimar Cargo</title>
 </head>
 <body>
-    <div class="wrapper todo">
+            <header class="header">
+              <div class="wrapper"> 
+                <figure>
+                    <img src="./images/logoalcimar2.png" alt ="LOGO" width="250" />
+                </figure>
 
-        <header class="header" id="nav">
-            <figure class="logo">
-                <img src="./images/logoalcimar2.png" alt ="LOGO" width="250" />
-            </figure>
             <!-- navbar -->
-            <nav>
-                <ul class="menu">
-                    <li><a class="link"href="#contacto">Contacto</a></li>
-                    <li><a class="link"href="#nosotros">Nosotros </a></li>
-                    <li><a class="link"href="#servicios">Servicio</a></li>
-                    <li><a class="link"href="#">Inicio</a></li>
-                </ul>
-                
-            </nav>
+
+                <nav class="menu">
+                    <ul class>
+                        <li><a class="link"href="#">Inicio</a></li>
+                        <li><a class="link"href="#servicios">Servicio</a></li>
+                        <li><a class="link"href="#nosotros">Nosotros </a></li>
+                        <li><a class="link"href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+              </div>
         </header>
+
             <!-- BANNER -->
+
         <div class="banner">
             <figure>
                 <img class="imagen-truck" src="./images/bannermejorado.png">
             </figure>
         </div>
 
-        <section class="main" id="main">
-        <h2 class="title servicios" id="servicios" > Servicio  <span class="premium">Premium</span> de Carga</h2>
-         <div class="body">
-            <div class="cart one">
-              <figure class="image-container">
-                <img class="imagencart" src="./images/imagen2.jpg">
-              </figure>
-              <div class="parrafo contenedor">
-                  <p>
-                     <span class="title-cart-1">servicio de transporte <br></span>
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium necessitatibus, veritatis accusantiuvoluptas quasi optio? Labore repudiandae, perferendis distinctio ipsa consequatur rerum minima temporeAsperiores veniam maxime ex aut esse?
-                    </p>
-              </div>
-            </div>  
-             <div class="cart two">
-                <div class="parrafo contenedor">
-                    <p>
-                        <span class="title-cart-1">servicio de transporte  <br></span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos eum, soluta eaque nobis suscipit corporis perspiciatis deleniti ab at, est rem officiis ipsum consectetur! Voluptas asperiores repellat quas error suscipit?
-                    </p>
-                </div>
-                    <figure class="image-container">
-                        <img class="imagencart" src="./images/modulos.jpg">
-                    </figure>
-        </div>
-            </div>  
-         </section>
+            <!-- SERVICIOS -->
+
+        <section  id="main">
+         <h2 class="title servicios" id="servicios" > Servicio  <span class="premium">Premium</span> de Carga</h2>
+         <div class="wrapper">
+             <div class="main">
+                <div class="cart one">
+                  <figure class="image-container">
+                    <img class="imagencart" src="./images/imagen2.jpg">
+                  </figure>
+                  <div class="parrafo contenedor">
+                      <p>
+                         <span class="title-cart-1">servicio de transporte <br></span>
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium necessitatibus, veritatis accusantiuvoluptas quasi optio? Labore repudiandae, perferendis distinctio ipsa consequatur rerum minima temporeAsperiores veniam maxime ex aut esse?
+                        </p>
+                  </div>
+                </div>  
+                 <div class="cart two">
+                    <div class="parrafo contenedor">
+                        <p>
+                            <span class="title-cart-1">servicio de transporte  <br></span>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos eum, soluta eaque nobis suscipit corporis perspiciatis deleniti ab at, est rem officiis ipsum consectetur! Voluptas asperiores repellat quas error suscipit?
+                        </p>
+                    </div>
+                        <figure class="image-container">
+                            <img class="imagencart" src="./images/modulos.jpg">
+                        </figure>
+            </div>
+                </div>  
+           
+         </div> 
+        </section>
+
+            <!-- RUTAS -->      
+        <section>
+            <h1 class="title">Nuestras Rutas</h1>
+                    <div class="cardplace">
+                        <div class="cardplace-content">
+                            <p>Lima - Huanuco - Aguaytía - Pucallpa - Tingo María - Contamana - Iquitos - Moquegua - Yurimaguas - Tarapoto<p>
+                            <a href="#contacto">Cotiza con nosotros</a>
+                        </div>     
+                    </div>
+            </div>
+        </section>
          <!-- NOSOTROS -->
          <section class="nosotros"id="nosotros">
            <h2 class="title">Nosotros</h2>
-           <div class="wrapper">
-               <div class="grid">
+           <div class="wrapper-cards">
+              
                        <article class="card experiencia">
                            <p class="card-title">
                              SOMOS EXPERTOS
@@ -110,7 +130,7 @@
                              <span class="card-experiencia-content">Evaluaciones y cuidados semanales a nuestro personal </span>
                          </p>
                      </article>
-                   </div>
+                   
            </div>
          </section>
          <!-- formulario contacto  -->
@@ -119,46 +139,35 @@
              <div class="contenedor-formulario">
                 <form class="formulario" id="formulario">
                     <input 
-                        class="forma-uno" 
+                        class="input_field nombre" 
                         type="text" 
                         name="nombre" 
                         id="nombre" 
-                        placeholder="Nombre"> 
-                    <div class="divisor">
+                        placeholder="Nombre y apellidos"> 
+
                     <input 
-                        class="forma dos" 
+                        class="input_field correo" 
                         type="text" 
                         name="correo" 
                         id="correo" 
                         placeholder="Correo"> 
                     <input 
-                        class="forma dos" 
+                        class="input_field telefono" 
                         type="number" 
                         name="telefono" 
                         id="telefono" 
-                        placeholder="Teléfono"> 
-                    </div>
-                    <div class="divisor">
+                        placeholder="Número"> 
                     <input 
-                        class="forma dos" 
-                        type="text" 
-                        name="razonsocial" 
-                        id="razonsocial" 
-                        placeholder="Razón Social">               
-                    <input 
-                        class="forma dos" 
-                        type="text" 
-                        name="ruc" 
-                        id="ruc" 
-                        placeholder="RUC">               
-                    </div>
-                    <input 
-                        class="forma-uno" 
+                        class="input_field mensaje" 
                         type="text" 
                         name="mensaje" 
                         id="mensaje" 
-                        placeholder="Mensaje">               
+                        placeholder="Mensaje">        
             </form>
+            <div id='btn'>
+                <button class="btn" type="button">Enviar</button>       
+            </div>
+
         </div>                
         </section>
         <!-- contacto alcimar  -->
@@ -184,9 +193,14 @@
         <footer>
             <h2 class="title footer">Nuestras redes sociales</h2>
             <div class="rrss-container" id="rrss">
-                <img src="./images/facebookIcon.png" alt="Facebook" width="40px">
-                <img src="./images/iconolinkedin.png" alt="Linked In" width="40px">
-                <img src="./images/instagramicon.png" alt="Instagram" width="40px">
+                <a href="https://www.facebook.com/Alcimar-Cargo-108137694289527/"  target="_blank" class="">
+                    <img src="./images/facebookIcon.png" alt="Facebook" width="40px">
+                </a>
+                 <img src="./images/iconolinkedin.png" alt="Linked In" width="40px">
+                <a href="https://www.instagram.com/alcimarcargo/" target="_blank" class="">
+                    <img src="./images/instagramicon.png" alt="Instagram" width="40px">
+                </a>
+              
             </div>
             <div class="links">
                 <a href="">Terminos y condiciones de uso</a>
