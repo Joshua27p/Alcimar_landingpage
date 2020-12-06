@@ -16,7 +16,7 @@ body {
   --color-black: rgb(49, 47, 47);
   --cardGray: #f0f3fa;
   --cardTitle: #6f717e;
-  --baseBackground: rgb(247, 241, 241);
+  --baseBackground: rgb(245, 243, 243);
 }
 .wrapper {
   max-width: 1000px;
@@ -70,7 +70,6 @@ li a:hover {
   margin: 0px 20px;
   color: var(--color-white);
   padding: 14px 16px;
-  text-decoration: none;
   border: 1pxs solid var(--color-verde);
   border-radius: 25px;
   font-family: "Comfortaa", cursive;
@@ -131,6 +130,7 @@ li a:hover {
   height: 15rem;
   position: relative;
   top: 18%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .image-container {
   margin: 0;
@@ -143,12 +143,11 @@ li a:hover {
   width: 49%;
   height: 17rem;
   border-radius: 45px;
-  background-color: var(--color-verde);
   padding: 2rem;
 }
 .parrafo {
   font-family: "Comfortaa", cursive;
-  color: var(--color-white);
+  color: var(--color-black);
   justify-content: space-around;
   font-size: 1.1rem;
 }
@@ -163,12 +162,8 @@ li a:hover {
   margin-bottom: 2rem;
 }
 
-.parrafo.uno {
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
-}
-.parrafo.dos {
-  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.4);
-}
+ 
+ 
 
 /* .main {
   display: none;
@@ -268,7 +263,9 @@ li a:hover {
 .formulario {
   display: grid;
   background-color: var(--color-white);
-  padding: 20px;
+  padding: 2rem;
+  border-radius: 15px;
+ box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .input_field {
   width: inherit;
@@ -331,6 +328,7 @@ li a:hover {
   position: relative;
   margin: 0 10px 0 10px;
   width: 300px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .card:before {
   content: "";
@@ -365,60 +363,97 @@ li a:hover {
   font-size: 0.75m;
   font-family: "Comfortaa", cursive;
 }
-/* Contacto */
-.contact {
-  background: var(--color-verde);
-  padding: 0.5rem;
-}
-.title.contact {
-  color: var(--color-gold);
-}
-#alcimar {
-  font-family: "Comfortaa", cursive;
-  color: var(--color-white);
-}
-.contact-alcimar {
-  display: flex;
-  justify-content: space-around;
-  font-weight: bold;
-  font-family: "Comfortaa", cursive;
-}
-.title-conctacto-first {
-  font-family: "Comfortaa", cursive;
-  color: var(--color-white);
-  font-size: 2rem;
-}
 /* FOOTER */
-.rrss-container {
+footer{
+  background: var(--color-verde);
+  color: white;
+  width: 100%;
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+  font-family: "Comfortaa", cursive;
+  padding: 40px;
+  padding-bottom: 0;
+   
+}
+.container-footer-all{
+  width: 100%;
+  max-width:1200px;
+}
+.container-footer{
   display: flex;
-  justify-content: center;
-  margin: 2rem 0 4rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+} 
+.colum1{
+  max-width: 400px;
 }
-.title.footer {
-  font-size: 30px;
-  color: var(--color-black);
+.colum1 h1{
+  font-size: 16px;
 }
-#rrss img {
-  margin: 0 1em;
-  cursor: pointer;
+.colum1 p{
+  font-size: 12px;
+  color: #c7c7c7;
+  margin-top: 20px;
 }
-.links {
+.colum2{
+  max-width: 400px;
+}
+.colum2 h1{
+  font-size: 16px;
+}
+.colum2 .row{
+  margin-top: 20px;
   display: flex;
+}
+#icon{
+ margin-right: 10px;
+}
+.row label{
+ margin-top: 10px;
+font-size: 12px;
+}
+.colum3{
+  max-width: 400px;
+}
+.colum3 h1{
+  font-size: 16px;
+}
+.row2{
+  margin-top: 20px;
+}
+.row2 label{
+  max-width: 140px;
+  font-size:12px;
+ 
+}
+.container-footer2{
+  display: flex;
+  align-items: center;
   justify-content: space-around;
 }
-.links a {
-  text-decoration: none;
-  color: var(--color-black);
-  text-decoration: underline;
-  font-size: 1em;
+.copyright{
+  font-size: 10px;
 }
+.information{
+  
+  text-decoration: none;
+  
+}
+.information a{
+  list-style: none;
+  color: var(--color-white);
+  font-size: 10px;
+}
+  
+   
 
 @media screen and (max-width: 1024px) {
 }
 @media screen and (max-width: 932px) {
   .header {
     height: auto;
-    display: block;
+    display: block; 
   }
   .menu {
     display: flex;
