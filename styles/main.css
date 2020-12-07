@@ -130,7 +130,7 @@ li a:hover {
   height: 15rem;
   position: relative;
   top: 18%;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .image-container {
   margin: 0;
@@ -161,9 +161,6 @@ li a:hover {
   font-weight: bold;
   margin-bottom: 2rem;
 }
-
- 
- 
 
 /* .main {
   display: none;
@@ -265,7 +262,7 @@ li a:hover {
   background-color: var(--color-white);
   padding: 2rem;
   border-radius: 15px;
- box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .input_field {
   width: inherit;
@@ -275,7 +272,7 @@ li a:hover {
   margin: 10px;
   font-family: "Comfortaa", cursive;
   margin: 5px 0;
-  padding: 5px;
+  padding: 10px;
   box-shadow: 0px 7px 18px -4px rgba(0, 0, 0, 0.05);
 }
 .input_field.mensaje {
@@ -328,7 +325,7 @@ li a:hover {
   position: relative;
   margin: 0 10px 0 10px;
   width: 300px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .card:before {
   content: "";
@@ -364,96 +361,98 @@ li a:hover {
   font-family: "Comfortaa", cursive;
 }
 /* FOOTER */
-footer{
+footer {
   background: var(--color-verde);
   color: white;
   width: 100%;
-  margin:0px;
-  padding:0px;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
   font-family: "Comfortaa", cursive;
   padding: 40px;
   padding-bottom: 0;
-   
 }
-.container-footer-all{
+.container-footer-all {
   width: 100%;
-  max-width:1200px;
+  max-width: 1200px;
 }
-.container-footer{
+.container-footer {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
-} 
-.colum1{
+}
+.colum1 {
   max-width: 400px;
 }
-.colum1 h1{
+
+.colum1 h1 {
   font-size: 16px;
 }
-.colum1 p{
+.colum1 figure {
+  margin: 0;
+  padding: 0;
+}
+.colum1 figure img {
+  width: 200px;
+}
+.colum1 p {
   font-size: 12px;
   color: #c7c7c7;
   margin-top: 20px;
 }
-.colum2{
+.colum2 {
   max-width: 400px;
 }
-.colum2 h1{
+.colum2 h1 {
   font-size: 16px;
 }
-.colum2 .row{
+.colum2 .row {
   margin-top: 20px;
   display: flex;
 }
-#icon{
- margin-right: 10px;
+#icon {
+  margin-right: 10px;
 }
-.row label{
- margin-top: 10px;
-font-size: 12px;
+.row label {
+  margin-top: 10px;
+  font-size: 12px;
 }
-.colum3{
+.colum3 {
   max-width: 400px;
 }
-.colum3 h1{
+.colum3 h1 {
   font-size: 16px;
 }
-.row2{
+.row2 {
   margin-top: 20px;
 }
-.row2 label{
+.row2 label {
   max-width: 140px;
-  font-size:12px;
- 
+  font-size: 12px;
 }
-.container-footer2{
+.container-footer2 {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.copyright{
+.copyright {
   font-size: 10px;
 }
-.information{
-  
+.information {
   text-decoration: none;
-  
 }
-.information a{
+.information a {
   list-style: none;
   color: var(--color-white);
   font-size: 10px;
 }
-  
-   
 
 @media screen and (max-width: 1024px) {
 }
 @media screen and (max-width: 932px) {
   .header {
     height: auto;
-    display: block; 
+    display: block;
   }
   .menu {
     display: flex;
@@ -478,36 +477,47 @@ font-size: 12px;
     margin: 0px 0px 0px 0px;
     padding: 10px 0px;
   }
+  .container-footer {
+    display: block;
+    margin-left: 100px;
+  }
+}
 
-  @media screen and (max-width: 767px) {
-    .cart {
-      display: block;
-    }
-    .imagencart {
-      display: none;
-    }
-    .parrafo.contenedor {
-      width: auto;
-    }
-    .parrafo {
-      font-size: 15px;
-    }
-    .title {
-      font-size: 2em;
-    }
-    .title-cart-1 {
-      font-size: 1.5em;
-    }
-    .contact-alcimar {
-      display: none;
-    }
-    .contact-alcimar.dos {
-      display: block;
-      text-align: center;
-      color: var(--color-white);
-    }
-    .links {
-      font-size: 0.7em;
-    }
+@media screen and (max-width: 767px) {
+  .cart {
+    display: block;
+  }
+  .imagencart {
+    display: none;
+  }
+  .parrafo.contenedor {
+    width: auto;
+  }
+  .parrafo {
+    font-size: 15px;
+  }
+  .title {
+    font-size: 2em;
+  }
+  .title-cart-1 {
+    font-size: 1.5em;
+  }
+  .contact-alcimar {
+    display: none;
+  }
+  .contact-alcimar.dos {
+    display: block;
+    text-align: center;
+    color: var(--color-white);
+  }
+  .links {
+    font-size: 0.7em;
+  }
+  .container-footer {
+    margin: 0;
+  }
+  .container-footer2 {
+    margin: 20px 0;
+    display: block;
   }
 }
