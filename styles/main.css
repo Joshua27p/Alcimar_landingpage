@@ -372,6 +372,9 @@ footer {
   padding: 40px;
   padding-bottom: 0;
 }
+.colum2 .row a {
+  color: white;
+}
 .container-footer-all {
   width: 100%;
   max-width: 1200px;
