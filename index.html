@@ -149,17 +149,21 @@
     <section id="contacto">
         <h2 class="title contacto">Contactenos</h2>
         <div class="contenedor-formulario">
-            <form class="formulario" id="formulario">
+            <form 
+             action="https://formspree.io/f/mknpqrbg"
+             method="POST"
+            class="formulario" id="formulario">
                 <input class="input_field nombre" type="text" name="nombre" id="nombre"
                     placeholder="Nombre y apellidos">
 
-                <input class="input_field correo" type="text" name="correo" id="correo" placeholder="Correo">
+                <input  class="input_field correo" type="email" name="_replyto" id="correo" placeholder="Correo">
                 <input class="input_field telefono" type="number" name="telefono" id="telefono" placeholder="Número">
                 <input class="input_field mensaje" type="text" name="mensaje" id="mensaje" placeholder="Mensaje">
+                <div class="button-container">
+                    <input  id="enviar" type="submit" value="send">
+                </div>
             </form>
-            <div id='btn'>
-                <button class="btn" type="button">Enviar</button>
-            </div>
+             
 
         </div>
     </section>
@@ -181,11 +185,10 @@
                 <div class="colum2">
                     <h1>Redes sociales</h1>
                     <div class="row">
-                        <a href="https://www.facebook.com/Alcimar-Cargo-108137694289527/" target="_blank"  >
-                        <i id="icon" class="fab fa-facebook fa-2x"></i>
+                        <a href="https://www.facebook.com/Alcimar-Cargo-108137694289527" target="_blank">
+                            <i id="icon" class="fab fa-facebook fa-2x"></i>
                         </a>
                         <label>Siguenos en Facebook</label>
-              
                     </div>
                     <div class="row">
                         <a href="https://www.instagram.com/alcimarcargo/" target="_blank">
@@ -194,17 +197,13 @@
                         <label>Siguenos en Instagram</label>
                     </div>
                     <div class="row">
-                        <a href="https://www.linkedin.com/in/alcimar-operador-log%C3%ADstico-3851a4201/"  target="_blank">
+                        <a href="https://www.linkedin.com/in/alcimar-operador-log%C3%ADstico-3851a4201/" target="_blank">
                             <i id="icon" class="fab fa-linkedin fa-2x"></i>
+
                         </a>
                         <label>Siguenos en Linked In</label>
                     </div>
-                    <div class="row">
-                        <a href="https://www.youtube.com/" target="_blank">
-                            <i id="icon" class="fab fa-youtube fa-2x" ></i>
-                        </a>
-                        <label>Siguenos en Youtube</label>
-                    </div>
+                
 
                 </div>
                 <div class="colum3">
@@ -225,11 +224,14 @@
 
                 </div>
             </div>
-                <div class="container-footer2">
-                    <div class="copyright">
-                        2020 Todos los Derechos Reservados |
-                    </div>
+
+            <div class="container-footer2">
+                <div class="copyright">
+                    2020 Todos los Derechos Reservados |
                 </div>
+
+            
+            </div>
         </div>
 
 
@@ -239,6 +241,13 @@
 
 
     <script src="./app.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_ROv68n9APv8LrzVwVVate");
+        })();
+    </script>
 </body>
 
 </html>
