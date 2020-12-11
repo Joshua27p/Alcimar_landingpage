@@ -251,12 +251,20 @@ li a:hover {
 
 /* ****************************************** */
 /* FORMULARIO */
+#contacto {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .contenedor-formulario {
   max-width: 700px;
-  width: 100%;
-  margin: 20px auto;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
   box-sizing: border-box;
-  padding: 5px;
+  margin-bottom: 20px;
 }
 .formulario {
   display: grid;
@@ -265,20 +273,22 @@ li a:hover {
   border-radius: 15px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-.input_field {
-  width: inherit;
-  height: 50px;
-  border: 2px var(--color-gray) solid;
-  border-radius: 25px;
-  margin: 10px;
-  font-family: "Comfortaa", cursive;
-  margin: 5px 0;
-  padding: 10px;
-  box-shadow: 0px 7px 18px -4px rgba(0, 0, 0, 0.05);
+.form-group {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 20px;
 }
-.input_field.mensaje {
-  height: 100px;
-  outline: none;
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 18px;
+  border: 1px solid rgba(128, 128, 128, 0.199);
+  margin-top: 5px;
+}
+
+textarea {
+  resize: vertical;
 }
 #btn {
   display: flex;
@@ -299,10 +309,43 @@ li a:hover {
   font-weight: bold;
   border: 0;
   margin: 10px;
+  transition: 0.3s ease background-color;
 }
 #enviar:hover {
   background-color: var(--color--hover);
   cursor: pointer;
+}
+#status {
+  width: 90%;
+  max-width: 200px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 25px;
+  font-family: "Comfortaa", cursive;
+}
+#status.success {
+  background-color: rgb(211, 250, 153);
+  animation: status 4s ease forwards;
+}
+#status.error {
+  background-color: rgb(250, 129, 92);
+  color: var(--color-white);
+  animation: status 4s ease forwards;
+}
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 /* SECCION NOSOTROS */
