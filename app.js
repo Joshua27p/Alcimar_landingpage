@@ -10,7 +10,7 @@
     
     function success() {
       form.reset();
-      status.classList.add('succes');
+      status.classList.add('success');
       status.innerHTML = "Gracias por su preferencia";
     }
 
