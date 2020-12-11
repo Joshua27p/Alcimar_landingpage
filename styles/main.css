@@ -315,7 +315,24 @@ textarea {
   background-color: var(--color--hover);
   cursor: pointer;
 }
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+#overlay.showed {
+  animation: status 4s ease forwards;
+  display: flex;
+}
 #status {
+  position: relative;
   width: 90%;
   max-width: 200px;
   text-align: center;

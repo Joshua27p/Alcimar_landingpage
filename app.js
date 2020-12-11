@@ -5,11 +5,12 @@
     var form = document.getElementById("formulario");
     // var button = document.getElementById("my-form-button");
     var status = document.getElementById("status");
-
+    var overlay = document.getElementById("overlay");
     // Success and Error functions for after the form is submitted
     
     function success() {
       form.reset();
+      overlay.classList.add('showed');
       status.classList.add('success');
       status.innerHTML = "Gracias por su preferencia";
     }
