@@ -2,15 +2,7 @@
 <html lang="en">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6H3R6DM6BF"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-6H3R6DM6BF');
-    </script>
+   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -28,9 +20,22 @@
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
     <title>Alcimar Cargo</title>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6H3R6DM6BF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6H3R6DM6BF');
+    </script>
 </head>
 
 <body>
+    <figure class="container_menu-hamburguer">
+        <img class="hamburguer_menu" src="images/hamburguer_menu.png" alt="menu">
+    </figure>
     <header class="header">
         <div class="wrapper">
             <figure>
@@ -173,13 +178,15 @@
                         placeholder="Mensaje"></textarea>
                </div>
                 <div class="button-container">
-                    <input  id="enviar" type="submit" value="Enviar">
+                    <button class="btn">
+                        <span class="submit">Enviar</span>
+                        <span class="cargando"><i class="fa fa-refress"></i></span>
+                        <span class="check"><i class="fa fa-check"></i></span>
+                    </button>
                 </div>
             </form>
         </div>
-        <div id="overlay" class="overlay">
-            <div id="status"></div>
-        </div>
+   
     </section>
 
     <!-- FOOTER  -->
@@ -251,9 +258,7 @@
 
     </footer>
     </div>
-
-
-
+    <script src="./menu.js"></script>
     <script src="./app.js"></script>
  
 </body>

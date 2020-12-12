@@ -4,20 +4,18 @@
     
     var form = document.getElementById("formulario");
     // var button = document.getElementById("my-form-button");
-    var status = document.getElementById("status");
-    var overlay = document.getElementById("overlay");
+    var btn = document.getElementById("btn");
+    
     // Success and Error functions for after the form is submitted
     
     function success() {
       form.reset();
-      overlay.classList.add('showed');
-      status.classList.add('success');
-      status.innerHTML = "Gracias por su preferencia";
+     
     }
 
     function error() {
         status.classList.add('error')
-      status.innerHTML = "Hubo un error en sus datos";
+      btn.innerHTML = "Hubo un error en sus datos";
     }
 
     // handle the form submission event
